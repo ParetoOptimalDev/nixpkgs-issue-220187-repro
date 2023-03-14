@@ -1,9 +1,8 @@
 (message "")
 (message (concat "correct path: " "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"))
 
-(message "")
+(message "show there is no bug if tramp-own-remote-path is at front of tramp-remote-path")
 
-(message "simluate what nix does now and demonstrate bug")
 (let ((default-directory (concat "/docker:" (getenv "container_id") ":"))
       (tramp-remote-path '(tramp-own-remote-path)))
   (message "")
@@ -13,5 +12,6 @@
   (message ""))
 
 
+(message "TODO simluate what nix does now and demonstrate bug")
 
 ;; (let ((default-directory "/docker:8bd61beae4f7ff829396a548fe1a5067d62f95597a2c18a1fdd5f93c5e8d111a:")) (getenv "PATH"))
